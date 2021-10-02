@@ -1,7 +1,23 @@
+/*
+
+
+I Abhishek Bulid this game using html css js 
+its my first try to make a project using js
+
+   # The Blackjack Game
+
+#when we start the game we have 100 coins
+#when we draw a new card we have to pay 10 points for it
+#when we get blackjack our points are doubled
+
+*/
+
+
 // geting All elements from html
 let messageEl=document.getElementById("message-el");
 let cardEl=document.getElementById("cards-el");
 let simEl=document.getElementById("sum-el");
+let pointsEl=document.getElementById("points-el");
 
 //intiatlizing variables
 let firstCard=0;
@@ -12,7 +28,7 @@ let sum=0;
 let isBlackjack=false;
 let isAlive=true;
 let isGamestarted=true;
-
+let points=100;
 
 
 function getRamdomcard(){
@@ -51,17 +67,20 @@ function renderGame(){
     if(sum==21){
         message="Its a Blackjack "
         isBlackjack=true;
+        points*=2;
     }
     if(sum>21){
     message="You are out of Game!!"
+    points=0;
     isAlive=false;
     }
-    if(sum<21 && sum!=0)
+    if(sum<21 && sum!=0){
     message="Do you want new card"
     
-
-
+    }
     messageEl.textContent=message
+    
+    pointsEl.textContent="Coins: $ "+points;
 }
 
 
@@ -71,6 +90,7 @@ function getNewcard(){
     if(isBlackjack===false && isAlive===true){
    
         let newCard = getRamdomcard();
+        points-=10;
         cards.push(newCard);
         sum+=newCard;
         renderGame();
@@ -89,5 +109,6 @@ function restartGame(){
  isBlackjack=false;
  isAlive=true;
  isGamestarted=true
+ points=100;
     renderGame();
 }
