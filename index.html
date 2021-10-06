@@ -5,23 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href='style.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet"> 
     <title>The BlackJack Game</title>
 </head>
 <body>
-<div class="abhi">
-   Enter your Name<br>
-    <input type="text"> <br>
+
 </div> 
     <h1>Blackjack</h1>
-    <p id="message-el">Want to play round?</p>
-    <p id="cards-el">cards: </p>
-    <p id="sum-el">Sum: </p>
+    <div id="container">
+    
+    <h3 id="message-el">Want To Try Your LUCK ..let's Start The game </h3>
+    
+    <h2 id="cards-el">Choose Your Cards</h2>
+    <p id="sum-el">The sum should be 21 : </p>
+    
     <p id="points-el">Coins: $100 </p>
    <button onclick="startGame()">Start Game</button>
     <button onclick="getNewcard()">New Card</button>
     <div id="Restart">
    <button onclick="restartGame()" >Restart Game</button>
     </div>
+</div>
     <script src='script.js'></script>
 </body>
 </html>
