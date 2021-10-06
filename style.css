@@ -4,12 +4,19 @@ body{
     background-size: cover;
     text-align: center;
     font-size: 30px;
-    color: white;
+    color:black;
     font-weight: bold;
-    padding-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    font-family: 'Akronim', cursive;
+}
+#container{
+    border: 2px solid lightblue;
+    display: block;
+    width: 50%;
+    border-width: 5px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+
 }
 
 h1{
@@ -18,12 +25,12 @@ h1{
 }
 
 #message-el{
-    font-style: italic;
+    color:lightblue;
 }
 button{
     color: #016f32;
     width: 200px;
-    background: goldenrod;
+    background:lightblue;
     padding-top: 10px;
     padding-bottom: 8px;
     font-weight: bold;
@@ -31,6 +38,8 @@ button{
     border: none;
     margin-top: 2px;
     margin-bottom: 2px;
+    border: red solid 2px;
+    border-radius: 10px;
 }
 #Restart{
     padding-top: 5px;
